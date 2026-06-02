@@ -1,9 +1,9 @@
 import { defineConfig } from 'vite'
 
 export default defineConfig({
-  // GitHub Pages serves from a subpath (https://<user>.github.io/my-3d-app/),
-  // so assets must be referenced relative to that base. Change this to match
-  // your repo name, or set it to '/' if deploying to a root domain
+  // GitHub Pages serves this project site from a subpath matching the repo
+  // name: https://rus-unity.github.io/testpage.github.io/. The base must match
+  // the repo name exactly. Set it to '/' if deploying to a root domain
   // (Netlify, Vercel, Cloudflare Pages, custom domain).
-  base: '/my-3d-app/',
+  base: '/testpage.github.io/',
 })

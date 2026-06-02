@@ -18,7 +18,7 @@ const scene = new THREE.Scene()
 
 // Environment map for reflections + background, loaded from an HDRI
 const pmrem = new THREE.PMREMGenerator(renderer)
-new RGBELoader().load('/suburban_garden_2k.hdr', (hdr) => {
+new RGBELoader().load(import.meta.env.BASE_URL + 'suburban_garden_2k.hdr', (hdr) => {
   const envMap = pmrem.fromEquirectangular(hdr).texture
   scene.environment = envMap
   scene.background = envMap
