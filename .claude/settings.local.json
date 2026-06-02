@@ -3,7 +3,11 @@
     "allow": [
       "Bash(npm run *)",
       "Bash(git rm *)",
-      "Bash(rm -f src/counter.js)"
+      "Bash(rm -f src/counter.js)",
+      "Bash(gh run *)",
+      "Bash(curl -s \"https://api.github.com/repos/Rus-Unity/testpage.github.io/actions/runs?per_page=3\")",
+      "Bash(curl -s -o /dev/null -w '%{http_code}\\\\n' https://rus-unity.github.io/testpage.github.io/)",
+      "Bash(curl -s https://rus-unity.github.io/testpage.github.io/)"
     ]
   }
 }

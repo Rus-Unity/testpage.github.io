@@ -4,17 +4,45 @@
     <meta charset="UTF-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>my-3d-app</title>
+    <title>Model Viewer</title>
   </head>
   <body>
     <div id="app"></div>
     <div id="controls">
-      <label for="metalness">Metalness <span id="metalness-value"></span></label>
-      <input id="metalness" type="range" min="0" max="1" step="0.01" />
-      <label for="roughness">Roughness <span id="roughness-value"></span></label>
-      <input id="roughness" type="range" min="0" max="1" step="0.01" />
-      <label for="color">Color</label>
-      <input id="color" type="color" />
+      <fieldset>
+        <legend>Material</legend>
+        <label for="color">Color</label>
+        <input id="color" type="color" />
+        <label for="metalness">Metalness <span id="metalness-value"></span></label>
+        <input id="metalness" type="range" min="0" max="1" step="0.01" />
+        <label for="roughness">Roughness <span id="roughness-value"></span></label>
+        <input id="roughness" type="range" min="0" max="1" step="0.01" />
+        <label for="envMapIntensity">Env intensity <span id="envMapIntensity-value"></span></label>
+        <input id="envMapIntensity" type="range" min="0" max="2" step="0.01" />
+        <label for="emissive">Emissive</label>
+        <input id="emissive" type="color" />
+        <label for="emissiveIntensity">Emissive intensity <span id="emissiveIntensity-value"></span></label>
+        <input id="emissiveIntensity" type="range" min="0" max="3" step="0.01" />
+        <label for="normalScale">Normal scale <span id="normalScale-value"></span></label>
+        <input id="normalScale" type="range" min="0" max="2" step="0.01" />
+        <label for="opacity">Opacity <span id="opacity-value"></span></label>
+        <input id="opacity" type="range" min="0" max="1" step="0.01" />
+        <label class="toggle"><input id="albedoMap" type="checkbox" /> Albedo map</label>
+        <label class="toggle"><input id="roughnessMap" type="checkbox" /> Roughness map</label>
+        <label class="toggle"><input id="normalMap" type="checkbox" /> Normal map</label>
+        <label class="toggle"><input id="wireframe" type="checkbox" /> Wireframe</label>
+        <label class="toggle"><input id="flatShading" type="checkbox" /> Flat shading</label>
+      </fieldset>
+      <fieldset>
+        <legend>Renderer</legend>
+        <label for="envMap">Environment</label>
+        <select id="envMap">
+          <option value="museum_of_ethnography_2k">Museum of Ethnography</option>
+          <option value="suburban_garden_2k">Suburban Garden</option>
+        </select>
+        <label for="exposure">Exposure <span id="exposure-value"></span></label>
+        <input id="exposure" type="range" min="0" max="2" step="0.01" />
+      </fieldset>
     </div>
     <script type="module" src="/src/main.js"></script>
   </body>
